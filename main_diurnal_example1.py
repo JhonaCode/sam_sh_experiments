@@ -42,10 +42,7 @@ import  datetime as dt
 #separate with colon
 
 exp         =  [
-               #bomex1,
-               #medium 
-               s_shf_l, 
-               #small
+               small
                 ]
 
 lim         =  [

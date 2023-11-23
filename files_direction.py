@@ -1,10 +1,14 @@
 import os
 
 #Repository location 
-computer   = '/home/jhona'
-
+#computer   = '/home/jhona'
 #Figure out folder  
-path = "%s/repositories/sam/SAM6.11.4/GOAMAZON_LES/python/stat/testes_xc50/fig"%(computer)
+#path = "%s/repositories/sam/SAM6.11.4/GOAMAZON_LES/python/stat/testes_xc50/fig"%(computer)
+
+#Repository location 
+computer   = '/home/jhonatan.aguirre'
+#Figure out folder  
+path = "%s/sam_sh_experiments/fig"%(computer)
 
 # Check if the directory exists
 if not os.path.exists(path):
