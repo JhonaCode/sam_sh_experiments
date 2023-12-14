@@ -40,14 +40,21 @@ import  datetime as dt
 
 
 #separate with colon
-exp         =  [s_t_l] 
-exp_label   =  ['S t uMf', 'S t q$_l$'] 
 
-"""
 exp         =  [ 
+               #large
                #small,
-               #s_w_l,
+               s_qt_m_w_l,
+               s_qt_m_wshf_l,
+               s_qt_m_shf_l,
+               s_t_m_shf_l,
+               s_t_m,
+               l_t_m,
+               s_qt_m,
+               l_shft_m,
+               #s_shf_l,
                #s_lhf_l,
+               #s_qt_l,
                #s_hf_l,
                #s_q_l,
                #s_wshf_l,
@@ -58,20 +65,37 @@ exp         =  [
                #s_wqthfuv_l,
                #s_t_l,
                #s_tinit_l,
-               #large
-               #shca_q_l 
+               m_wshft_l,
+               m_wshf_l,
                #m_q_l 
                #m_wq_l 
                #m_wqhf_l 
                #m_halflhf 
+               #shca_q_l 
+               shca_shf_l,
+               shca_w_l,
                #l_shf_s
                 ]
+
+var         =   ['MCUP']        
 #figures name
 exp_label   =  [ 
-                #'S MCUP', 'S ql'  , 'w_ls',
+                'S q T M w L',
+                'M w shf T L',
+                'ShCa shf L',
+                'ShCa w L',
+                'M w shf L',
+                'S q T M w shf L',
+                'S q T M shf L',
+                'S T M shf L',
+                'S T M',
+                'L T M',
+                'S q T M',
+                'L shf T  M',
+                #'S q T L' ,
+                #'S', 'S shf L'  , 'w_ls'],
                 #'S hf L MCUP', 'S hf L ql' 
                 #'S wq L MCUP', 'S wq L ql'  
-                #'S w  L MCUP', 'S w L ql'  
                 #'S w q t hf L MCUP', 'S w q t hf L ql'  
                 #'S w t shf L MCUP', 'S w t shf L ql'  
                 #'S  shf t L MCUP', 'S  shf t L ql'  
@@ -86,41 +110,76 @@ exp_label   =  [
                 # 'M lhf/2' , 'M lhf/2 ql'  
                 # 'L shf S' , 'L shf S ql'  
                ]
-"""
 
 lim         =  [
-                (0,0.1),(0,0.02)
+                (0,0.1),(0,0.1),(0,0.1),
+                (0,0.1),(0,0.1),(0,0.1),
+                (0,0.1),(0,0.1),(0,0.1),
+                (0,0.1),(0,0.1),(0,0.1),
+                (0,0.1),(0,0.1),(0,0.1),
                ]
 
 var_to      =  [
                     1, 1, 1,  
+                    1, 1, 1,  
+                    1, 1, 1,  
+                    1, 1, 1,  
+                    1, 1, 1,  
                ]
 
 
-l1           =  ( 0.01,2.8,'upper right',True,True)
+l1           =  ( 0.001,2.8,'upper right',True,True)
 l2           =  ( 0.001,2.8,'upper right',True,True)
 l3           =  ( 0.001,2.8,'upper right',True,True)
 
 leg_loc      =  [ 
-                l1,l2,l3,
+                l1,l1,l1,
+                l1,l1,l1,
+                l1,l1,l1,
+                l1,l1,l1,
+                l1,l1,l1,
+                l1,l1,l1,
                 ]
 
 alt         =  [
+                3.0, 3.0, 3.0, 
+                3.0, 3.0, 3.0, 
+                3.0, 3.0, 3.0, 
+                3.0, 3.0, 3.0, 
                 3.0, 3.0, 3.0, 
                ]
 
 color       =  [
                 'black','black','black',
+                'black','black','black',
+                'black','black','black',
+                'black','black','black',
                ]
 
 show       =  [
-                True,True,True,
+                False,False,False,
+                False,False,False,
+                False,False,False,
+                False,False,False,
+                False,False,False,
                ]
 
 diurnal     =  [
                 True,True,True,
+                True,True,True,
+                True,True,True,
+                True,True,True,
+                True,True,True,
               ]
 
-dc.diurnal_hours_dict_sam(exp,explabel=exp_label,alt=alt,leg_loc=leg_loc,lim=lim,color=color,show=show,diurnal=diurnal)
+k=0
+for ex in exp:
 
+    j=0
+    for v in var:
 
+        dc.diurnal_hours_sam(ex,v,explabel=exp_label[k],alt=alt[k],leg_loc=leg_loc[k],lim=lim[k],color=color[k],show=show[k],diurnal=diurnal[k])
+
+        j+=1
+
+    k+=1

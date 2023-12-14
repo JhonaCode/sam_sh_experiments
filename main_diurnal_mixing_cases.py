@@ -40,13 +40,10 @@ import  datetime as dt
 
 
 #separate with colon
-exp         =  [s_t_l] 
-exp_label   =  ['S t uMf', 'S t q$_l$'] 
 
-"""
 exp         =  [ 
-               #small,
-               #s_w_l,
+               small,
+               s_shf_l,
                #s_lhf_l,
                #s_hf_l,
                #s_q_l,
@@ -66,61 +63,54 @@ exp         =  [
                #m_halflhf 
                #l_shf_s
                 ]
+
+var         =   ['MCUP','QC']        
 #figures name
 exp_label   =  [ 
-                #'S MCUP', 'S ql'  , 'w_ls',
-                #'S hf L MCUP', 'S hf L ql' 
-                #'S wq L MCUP', 'S wq L ql'  
-                #'S w  L MCUP', 'S w L ql'  
-                #'S w q t hf L MCUP', 'S w q t hf L ql'  
-                #'S w t shf L MCUP', 'S w t shf L ql'  
-                #'S  shf t L MCUP', 'S  shf t L ql'  
-                #'S  w q hf t uv L MCUP', 'S  w q hf t uv L ql'  
-                #'S t L MCUP', 'S t L ql'  
-                #'S tinit L MCUP', 'S tinit L ql'  
-                #'L MCUP', 'L ql'  
-                #' ShCa q L MCUP', 'ShCa q L ql'  
-                #' M q L MCUP', 'M q L ql'  
-                # 'M wq hf L MCUP', 'M wq hf L ql'  
-                # 'M MCUP', 'M ql'  
-                # 'M lhf/2' , 'M lhf/2 ql'  
-                # 'L shf S' , 'L shf S ql'  
+                ['S Mf', 'S ql'],
+                ['S Mf', 'S ql'],
                ]
-"""
 
 lim         =  [
-                (0,0.1),(0,0.02)
+                [(0,0.1),(0,0.7)],
+                [(0,0.1),(0,0.1)]
                ]
 
 var_to      =  [
-                    1, 1, 1,  
+                    [1 ,1],  
+                    [1 ,1],  
                ]
 
 
-l1           =  ( 0.01,2.8,'upper right',True,True)
+l1           =  ( 0.001,2.8,'upper right',True,True)
 l2           =  ( 0.001,2.8,'upper right',True,True)
 l3           =  ( 0.001,2.8,'upper right',True,True)
 
 leg_loc      =  [ 
-                l1,l2,l3,
+                  [l1,l2],
+                  [l1,l2],
                 ]
 
 alt         =  [
-                3.0, 3.0, 3.0, 
+                 [3.0, 3.0], 
+                 [3.0, 3.0], 
                ]
 
 color       =  [
-                'black','black','black',
+                ['black','black'],
+                ['black','black'],
                ]
 
 show       =  [
-                True,True,True,
+                [True,True],
+                [True,True],
                ]
 
 diurnal     =  [
-                True,True,True,
+                [True,True],
+                [True,True],
               ]
 
-dc.diurnal_hours_dict_sam(exp,explabel=exp_label,alt=alt,leg_loc=leg_loc,lim=lim,color=color,show=show,diurnal=diurnal)
 
+dc.diurnal_hours_exp_var_sam(exp,var,explabel=exp_label,alt=alt,leg_loc=leg_loc,lim=lim,color=color,show=show,diurnal=diurnal)
 

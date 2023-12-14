@@ -8,7 +8,8 @@ import os
 #Repository location 
 computer   = '/home/jhonatan.aguirre'
 #Figure out folder  
-path = "%s/sam_sh_experiments/fig"%(computer)
+#path = "%s/sam_sh_experiments/document/fig"%(computer)
+path = "%s/sam_sh_experiments/document/fig_final"%(computer)
 
 # Check if the directory exists
 if not os.path.exists(path):

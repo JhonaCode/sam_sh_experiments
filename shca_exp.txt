@@ -1,0 +1,4 @@
+GOAMAZON_LES_shca_q_large_1024x150_100_50m_1s.nc
+GOAMAZON_LES_shca_w_l_1024x150_100_50m_1s.nc
+GOAMAZON_LES_shca_shf_l_1024x150_100_50m_1s.nc
+GOAMAZON_LES_shca_wq_large_1024x150_100_50m_1s.nc
