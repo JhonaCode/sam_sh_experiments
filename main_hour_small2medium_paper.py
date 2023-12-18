@@ -62,15 +62,6 @@ exp         =  [
                 ]
 
 
-#exp_label   =  [
-#                'Small w Medium' ,  
-#                'Small',
-#                'Small T Medium' ,  
-#                'Small q T Medium' ,  
-#                'Small q SH T Medium' ,  
-#                'Medium' ,  
-#               ]
-#ar=r'$\rightarrow$'
 ar=r'$+$'
 ls='$\mathrm{_{ls}}$'
 exp_label   =  [
@@ -104,7 +95,10 @@ color_exp=[
 ########################################################
 
 lim         =  [
-                (0,0.05),
+                (0,0.085)
+               ]
+alt         =  [
+                 (0,3.2), 
                ]
 
 var_to      =  [
@@ -112,7 +106,8 @@ var_to      =  [
                ]
 
 #text(x,y),loc,z,x,legend
-l1           =  ( 0.007 ,0.9,'lower right',True,True,True)
+#l1           =  ( 0.007 ,0.9,'lower right',True,True,True)
+l1           =  ( 0.002,0.15,'upper right',True,True,True)
 
 leg_loc      =  [ 
                   l1,
@@ -125,16 +120,13 @@ show       =  [
 diurnal     =  [
                 True,
               ]
-alt         =  [
-                 (0,1.0),
-               ]
 
 ar=r'$\rightarrow$'
 exp_label_2  =  [
-                 r'a)Small%sMedium 14H'%ar ,  
+                 r'a)Small%sMedium 11H'%ar ,  
                 ]
 
-#dc.diurnal_exp_var_hour_sam(exp,var,11,fig_name,explabel=exp_label,explabel2=exp_label_2,xlabel=xlabel,alt=alt,leg_loc=leg_loc,lim=lim,color=color_exp,show=show,diurnal=diurnal)
+dc.diurnal_exp_var_hour_sam(exp,var,11,fig_name,explabel=exp_label,explabel2=exp_label_2,xlabel=xlabel,alt=alt,leg_loc=leg_loc,lim=lim,color=color_exp,show=show,diurnal=diurnal)
 
 lim         =  [
                 (0,0.085),
@@ -144,14 +136,14 @@ alt         =  [
                ]
 
 #text(x,y),loc,z,x,legend
-l1           =  ( 0.002,0.15,'lower right',True,True,False)
+l1           =  ( 0.002,0.15,'lower right',False,True,False)
 
 leg_loc      =  [ 
                   l1,
                 ]
 
 exp_label_2  =  [
-                 r'a)Small%sMedium 14H'%ar ,  
+                 r'b)Small%sMedium 14H'%ar ,  
                 ]
 
 dc.diurnal_exp_var_hour_sam(exp,var,14,fig_name,explabel=exp_label,explabel2=exp_label_2,xlabel=xlabel,alt=alt,leg_loc=leg_loc,lim=lim,color=color_exp,show=show,diurnal=diurnal)
@@ -165,14 +157,14 @@ alt         =  [
                  (0,3.2), 
                ]
 
-l1           =  ( 0.002,0.15,'upper right',False,True,True)
+l1           =  ( 0.002,0.15,'upper right',False,True,False)
 
 leg_loc      =  [ 
                   l1
                 ]
 
 exp_label_2  =  [
-                 r'b)Small%sMedium 17H'%ar ,  
+                 r'c)Small%sMedium 17H'%ar ,  
                 ]
 
 dc.diurnal_exp_var_hour_sam(exp,var,17,fig_name,explabel=exp_label,explabel2=exp_label_2,xlabel=xlabel,alt=alt,leg_loc=leg_loc,lim=lim,color=color_exp,show=show,diurnal=diurnal)

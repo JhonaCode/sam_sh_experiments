@@ -53,29 +53,21 @@ case=' Large-Small'
 
 
 #separate with comak 
-exp_label   = [
-#                  r'a) $\theta_v$'+case,r'b) RH'+case, r'c) W'+case, 
-#                 r'd) $\theta_v$'+case,r'e) RH'+case, r'f) W'+case, 
-                 r'$\theta_v$'+case,r' RH'+case, r' W'+case, 
-#                r'a) $\mathrm{\theta}_{ls}$'+case, r'b) q$_{ls}$'+case, r'c) W'+case, 
-] 
+exp_label   =  [
+                r'a) $\mathrm{\theta_{ls}}$'+case, r'b) q$\mathrm{_{ls}}$'+case,
+                ] 
 
-var         =  ['THETAV','RELH','WOBS',]
+var         =  ['TTEND','QTEND']
 
 #print(small.QVOBS.units)
 #print(small.WOBS.units)
 #print(small.THETAV.units)
 
-c1=(-2.0   ,2.0   ,21,'[K]')
-c2=(-30    ,30    ,21,'[%]')
-c3=(-1.5   ,1.5   ,21,'[cms$^{-1}$]')
-
-#c1=(-5     ,5    ,21,'[Kday$^{-1}$]')
-#c2=(-5     ,5    ,21,'[gkg$^{-1}$day$^{-1}$]')
-#c3=(-1.5   ,1.5    ,21,'[cms$^{-1}$]')
+c1=(-5     ,5    ,21,'[Kday$^{-1}$]')
+c2=(-5     ,5    ,21,'[gkg$^{-1}$day$^{-1}$]')
 
 contour     =[
-              c1,c2,c3
+              c1,c2
              ]
 
 
@@ -96,8 +88,7 @@ color       =  [
 ####bar ,y axis, top_lfc_pbl,cm a mais do grafico
 a1          =  (True,True ,True,0.35,1.34)
 a2          =  (True,False,True,0.35,1.28)
-a3          =  (True,False,True,0.35,1.28)
-axis_on     =  [a1,a2,a3,]
+axis_on     =  [a1,a2]
 
 
 show       =  [

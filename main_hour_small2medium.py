@@ -169,9 +169,11 @@ fig_name='s2m_final'
 hour=11
 
 lim         =  [
-                (0,0.05)
-                ,
-                (0,0.05)
+                (0,0.1)
+               ]
+
+alt         =  [
+                 (0,3.5)
                ]
 
 var_to      =  [
@@ -180,7 +182,7 @@ var_to      =  [
                ]
 
 
-l1           =  ( 0.02,0.9,'lower right',True,True,True)
+l1           =  ( 0.01,0.1,'upper right',True,True,False)
 
 leg_loc      =  [ 
                   l1,
@@ -201,9 +203,6 @@ show       =  [
 diurnal     =  [
                 True,True
               ]
-alt         =  [
-                 [0,1.0],
-                 [0,1.0]
                ]
 exp_label_2  =  [
                 
@@ -225,7 +224,7 @@ alt         =  [
                  (0,3.5)
                ]
 
-l1           =  ( 0.01,0.1,'upper right',True,True,True)
+l1           =  ( 0.01,0.1,'upper right',False,True,False)
 
 leg_loc      =  [ 
                   l1,
