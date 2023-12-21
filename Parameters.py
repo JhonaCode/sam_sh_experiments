@@ -494,8 +494,6 @@ s_qinit_m = sam.ncload(name,date,file_34,cal,var1d,var2d,vars_diurnal,date_diurn
 ####################################$$$$$$$$$$$$$$$$$$4
 ####################################$$$$$$$$$$$$$$$$$$4
 
-
-
 name        = 's_tadv_m'
 #note       = small with  T advection only no tinit  of medium, 100 m resolution 
 file_37     = '/dados/bamc/jhonatan.aguirre/SHALLOW/shca_teste/OUT_STAT/GOAMAZON_LES_small_tadv_medium_1024x150_100_50m_1s.nc'
@@ -506,3 +504,5 @@ date        = [(2014,1,1,9),(2014,1,1,19)]
 date_diurnal= [(2014,1,1,9),(2014,1,1,19)] 
 cal         = ['days  since 2014-01-01 00:00:00 +04:00:00','gregorian']
 s_tadv_m = sam.ncload(name,date,file_37,cal,var1d,var2d,vars_diurnal,date_diurnal)
+
+

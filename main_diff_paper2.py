@@ -43,21 +43,22 @@ exp1=small
 exp2=large
 case=' Large-Small'
 
-#exp1=medium
-#exp2=large
-#case=' Large-Medium'
+exp1=medium
+exp2=large
+case=' Large-Medium'
 #
-#exp1=small
-#exp2=medium
-#case=' Medium-Small'
+exp1=small
+exp2=medium
+case=' Medium-Small'
 
 
 #separate with comak 
 exp_label   =  [
                 r'a) $\mathrm{\theta_{ls}}$'+case, r'b) q$\mathrm{_{ls}}$'+case,
+                r'c) U'+case, r'd) V'+case,
                 ] 
 
-var         =  ['TTEND','QTEND']
+var         =  ['TTEND','QTEND','UOBS','VOBS']
 
 #print(small.QVOBS.units)
 #print(small.WOBS.units)
@@ -65,14 +66,16 @@ var         =  ['TTEND','QTEND']
 
 c1=(-5     ,5    ,21,'[Kday$^{-1}$]')
 c2=(-5     ,5    ,21,'[gkg$^{-1}$day$^{-1}$]')
+c3=(-3     ,3    ,21,'[ms$^{-1}$]')
+c4=(-2     ,2    ,21,'[ms$^{-1}$]')
 
 contour     =[
-              c1,c2
+              c1,c2,c3,c4
              ]
 
 
 var_to      =  [
-                  1,1,100
+                  1,1,1,1
                ]
 
 alt         =  [
@@ -88,12 +91,14 @@ color       =  [
 ####bar ,y axis, top_lfc_pbl,cm a mais do grafico
 a1          =  (True,True ,True,0.35,1.34)
 a2          =  (True,False,True,0.35,1.28)
-axis_on     =  [a1,a2]
+a3          =  (True,False,True,0.35,1.28)
+a4          =  (True,False,True,0.35,1.28)
+axis_on     =  [a1,a2,a3,a4]
 
 
 show       =  [
-                 True,True,True,
-                 #False,False,False,False
+                 #True,True,True,True,
+                 False,False,False,False
               ]
 
 days        = [ 

@@ -24,13 +24,7 @@
 # $ conda deactivate
 #
 # path of the ncfile or data to plot
-from    Parameters         import small
-from    Parameters_medium  import medium
-from    Parameters_large   import large
-
-################################################################ 
-# to defined fig out direction, and others important parameters 
-from    files_direction import *
+from    Parameters_2d         import * 
 
 # Load function to make the diurnal cycle and profiles figures.  
 #import  sam_python.diurnal   as dc
@@ -38,26 +32,15 @@ from    files_direction import *
 # Load function to make the diurnal cycle and profiles figures.  
 import  sam_python.two_dimensional   as two
 
-exp1=small
-exp2=medium
-case=' Medium-Small'
 
-
-exp1=medium
-exp2=large
-case=' Large-Medium'
-
-##
-#exp1=small
-#exp2=large
-#case=' Large-Small'
+exp=small_2d
 
 
 #separate with comak 
 exp_label   = [
-#                  r'a) $\mathrm{\theta_v}$'+case,r'b) RH'+case, r'c) W'+case, 
-                  r'd) $\mathrm{\theta_v}$'+case,r'e) RH'+case, r'f) W'+case, 
-#                 r'$\mathrm{\theta_v}$'+case,r' RH'+case, r' W'+case, 
+#                  r'a) $\theta_v$'+case,r'b) RH'+case, r'c) W'+case, 
+#                 r'd) $\theta_v$'+case,r'e) RH'+case, r'f) W'+case, 
+                 r'$\theta_v$'+case,r' RH'+case, r' W'+case, 
 #                r'a) $\mathrm{\theta}_{ls}$'+case, r'b) q$_{ls}$'+case, r'c) W'+case, 
 ] 
 
@@ -95,9 +78,9 @@ color       =  [
                ]
 
 ####bar ,y axis, top_lfc_pbl,cm a mais do grafico
-a1          =  (True,True ,True,True,0.35,1.34)
-a2          =  (True,False,True,True,0.35,1.28)
-a3          =  (True,False,True,True,0.35,1.28)
+a1          =  (True,True ,True,0.35,1.34)
+a2          =  (True,False,True,0.35,1.28)
+a3          =  (True,False,True,0.35,1.28)
 axis_on     =  [a1,a2,a3,]
 
 

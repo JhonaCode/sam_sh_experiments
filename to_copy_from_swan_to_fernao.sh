@@ -2,14 +2,14 @@
 
 #Name of the the experiment to download without extension  
 #Exp=GOAMAZON_LES_small_t_medium_q_large_1024x150_100_50m_1s
-Exp=GOAMAZON_LES_small_tadv_medium_1024x150_100_50m_1s
+Exp=GOAMAZON_LES_large_1024x150_100_50m_1s
 
 #note to put 
 #note='shca with t of medium and q of large, 100 m resolution ' 
-note='small with  T advection only no tinit  of medium, 100 m resolution ' 
+note='large with 2d OUT each hour, 100 m resolution ' 
 
 #exp_name='s_t_m_q_l'
-exp_name='s_tadv_m'
+exp_name='large'
 
 #Inicial day of the experiment
 di=(2014,1,1,9)
@@ -82,33 +82,41 @@ if  [ -d "$out_loc/OUT_STAT" ]; then
         echo "The folder OUT_STAT files exits, nothing to do"
 else 
         echo "Folder OUT_STAT was created"
-        mkdir OUT_STAT
+        mkdir $out_loc/OUT_STAT
 fi
 
 if  [ -d "$out_loc/OUT_2D" ]; then
         echo "The folder OUT_2D files exits, nothing to do"
 else 
         echo "Folder OUT_2D was created"
-        mkdir OUT_2D
+        mkdir $out_loc/OUT_2D
 fi
 
 if  [ -d "$out_loc/OUT_3D" ]; then
         echo "The folder OUT_3D files exits, nothing to do"
 else 
         echo "Folder OUT_3D was created"
-        mkdir OUT_3D
+        mkdir $out_loc/OUT_3D
 fi
 
 if  [ -d "$out_loc/prm_files" ]; then
         echo "The folder prm_filesk files exits, nothing to do"
 else 
         echo "Folder prm_files was created"
-        mkdir prm_files
+        mkdir $out_loc/prm_files
+fi
+
+if  [ -d "$out_loc/OUT_files" ]; then
+        echo "The folder OUT_files  exits, nothing to do"
+else 
+        echo "Folder OUT_files was created"
+        mkdir $out_loc/OUT_files
 fi
 
 out_stat=$out_loc/OUT_STAT
 out_2D=$out_loc/OUT_2D
 out_3D=$out_loc/OUT_3D
+out_files=$out_loc/OUT_files
 
 #Folde to save the prm of the SAM run. 
 prmfolder=$out_loc/prm_files
@@ -199,11 +207,15 @@ fi
 
 HOME1=${out_stat}
 
-scp  ${machine1}:${HOME2}/files_${Exp}.tar.gz ${out_stat}/
+scp  ${machine1}:${HOME2}/files_${Exp}.tar.gz ${out_files}/
 
 #tar -xvf ${out_stat}/files_${Exp}.tar --strip-components 7 -C ${out_stat}/  
-tar -xvzf ${out_stat}/files_${Exp}.tar.gz --strip-components ${numberoffolder} -C ${out_stat}/  
+tar -xvzf ${out_files}/files_${Exp}.tar.gz --strip-components ${numberoffolder} -C ${out_files}/  
 
-echo "The files were copied and extracted in the ${out_stat} folder"
+mv ${out_files}/*2Dcom*.nc   ${out_2d}
+mv ${out_files}/prm*         ${out_prm}
+mv ${out_files}/*.nc         ${out_stat}
+
+echo "The files were copied and extracted in the ${out_files} folder"
 exit 10 
 
