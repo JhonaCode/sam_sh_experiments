@@ -74,9 +74,6 @@ exp_label   =  [
                 'Large(L)',  
                ]
 
-exp_label_2  =  [
-                 r'd)Medium%sLarge 11H LT'%ar ,  
-                ]
 
 fig_name='m2l_final'
 
@@ -121,37 +118,54 @@ alt         =  [
 
 #text(x,y),loc,z,x,legend
 #l1           =  ( 0.007 ,0.9,'lower right',True,True,True)
-l1           =  ( 0.002,0.150,'upper right',True,True,True)
+l1           =  ( [0.002,0.150],[0.02,3.30],'center right',True,True,True)
 
 leg_loc      =  [ 
                   l1
                 ]
 
-dc.diurnal_exp_var_hour_sam(exp,var,11,fig_name,explabel=exp_label,explabel2=exp_label_2,xlabel=xlabel,alt=alt,leg_loc=leg_loc,lim=lim,color=color_exp,show=show,diurnal=diurnal)
+exp_label_2  =  [
+                 r'd)Medium%sLarge'%ar ,  
+                ]
+
+exp_label_3  =  [
+                 r'11 Hours LT',  
+                ]
+
+dc.diurnal_exp_var_hour_sam(exp,var,11,fig_name,explabel=exp_label,explabel2=exp_label_2,explabel3=exp_label_3,xlabel=xlabel,alt=alt,leg_loc=leg_loc,lim=lim,color=color_exp,show=show,diurnal=diurnal)
+
 
 #text(x,y),loc,z,x,legend
-l1           =  ( 0.002,0.150,'upper right',False,True,False)
+l1           =  ( [0.002,0.150],[0.02,3.30],'center right',False,True,False)
 
 leg_loc      =  [ 
                   l1
                 ]
 
 exp_label_2  =  [
-                 r'e)Medium%sLarge 14H LT'%ar ,  
+                 r'e)Medium%sLarge'%ar ,  
                 ]
 
-dc.diurnal_exp_var_hour_sam(exp,var,14,fig_name,explabel=exp_label,explabel2=exp_label_2,xlabel=xlabel,alt=alt,leg_loc=leg_loc,lim=lim,color=color_exp,show=show,diurnal=diurnal)
+exp_label_3  =  [
+                 r'14 Hours LT',  
+                ]
+
+dc.diurnal_exp_var_hour_sam(exp,var,14,fig_name,explabel=exp_label,explabel2=exp_label_2,explabel3=exp_label_3,xlabel=xlabel,alt=alt,leg_loc=leg_loc,lim=lim,color=color_exp,show=show,diurnal=diurnal)
 
 
-l1           =  ( 0.002,0.151,'upper right',False,True,False)
+l1           =  ( [0.002,0.150],[0.02,3.30],'center right',False,True,False)
 
 leg_loc      =  [ 
                   l1
                 ]
 
 exp_label_2  =  [
-                 r'f)Medium%sLarge 17H LT'%ar ,  
+                 r'f)Medium%sLarge'%ar ,  
                 ]
 
-dc.diurnal_exp_var_hour_sam(exp,var,17,fig_name,explabel=exp_label,explabel2=exp_label_2,xlabel=xlabel,alt=alt,leg_loc=leg_loc,lim=lim,color=color_exp,show=show,diurnal=diurnal)
+exp_label_3  =  [
+                 r'17 Hours LT',  
+                ]
+
+dc.diurnal_exp_var_hour_sam(exp,var,17,fig_name,explabel=exp_label,explabel2=exp_label_2,explabel3=exp_label_3,xlabel=xlabel,alt=alt,leg_loc=leg_loc,lim=lim,color=color_exp,show=show,diurnal=diurnal)
 
