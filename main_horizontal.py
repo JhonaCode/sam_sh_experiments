@@ -33,70 +33,92 @@ from    Parameters_2d         import *
 import  sam_python.two_dimensional   as two
 
 
-exp=small_2d
-
+exp= [small_2d,medium_2d,large_2d]
 
 #separate with comak 
 exp_label   = [
-#                  r'a) $\theta_v$'+case,r'b) RH'+case, r'c) W'+case, 
-#                 r'd) $\theta_v$'+case,r'e) RH'+case, r'f) W'+case, 
-                 r'$\theta_v$'+case,r' RH'+case, r' W'+case, 
-#                r'a) $\mathrm{\theta}_{ls}$'+case, r'b) q$_{ls}$'+case, r'c) W'+case, 
-] 
+                 [r'a)Small  Wind 850[hpa]'], 
+                 [r'b)Medium Wind 850[hpa]'], 
+                 [r'c)Large  Wind 850[hpa]'], 
+              ] 
+lev=[850,850,850]
 
-var         =  ['THETAV','RELH','WOBS',]
-
-#print(small.QVOBS.units)
-#print(small.WOBS.units)
-#print(small.THETAV.units)
-
-c1=(-2.0   ,2.0   ,21,'[K]')
-c2=(-30    ,30    ,21,'[%]')
-c3=(-1.5   ,1.5   ,21,'[cms$^{-1}$]')
-
-#c1=(-5     ,5    ,21,'[Kday$^{-1}$]')
-#c2=(-5     ,5    ,21,'[gkg$^{-1}$day$^{-1}$]')
-#c3=(-1.5   ,1.5    ,21,'[cms$^{-1}$]')
+#sempre um intevalo a maid do numero de pontos
+#c1=( -3.0  , 0.0  ,21,'[ms$^{-1}$]')
+c1=( -8.0  , -6.0  ,21,'[ms$^{-1}$]')
 
 contour     =[
-              c1,c2,c3
+              [c1],
+              [c1],
+              [c1],
              ]
 
 
 var_to      =  [
-                  1,1,100
+                  [1,1],
+                  [1,1],
+                  [1,1],
                ]
 
-alt         =  [
-                3.5, 3.5, 3.5, 3.5, 3.5,
+xlim         =  [
+                [(0,50,10)], 
+                [(0,50,10)], 
+                [(0,50,10)], 
                ]
 
-co1='RdBu_r'
+ylim         =  [
+                [(0,50,10)], 
+                [(0,50,10)], 
+                [(0,50,10)], 
+               ]
+
+co1         =  'whbuyl'
+co2         =  'RdBu_r'
+co3         =  'jet_r'
 
 color       =  [
-                co1,co1,co1,co1,co1
+                [co3,co1],
+                [co3,co1],
+                [co3,co1],
                ]
 
-####bar ,y axis, top_lfc_pbl,cm a mais do grafico
-a1          =  (True,True ,True,0.35,1.34)
-a2          =  (True,False,True,0.35,1.28)
-a3          =  (True,False,True,0.35,1.28)
-axis_on     =  [a1,a2,a3,]
+####bar ,x,y axis, top_lfc_pbl,size,cm a mais do grafico
+a1          =  (True,True,True ,True,0.35,1.34)
+a2          =  (False,True,True ,True,0.35,0.06)
+a3          =  (False,True,False,True,0.35,0.00)
+a4          =  (True ,True,False,True,0.35,1.28)
+axis_on     =  [
+                [a1,a1],
+                [a1,a1],
+                [a1,a1],
+                ]
 
-
-show       =  [
-                 True,True,True,
-                 #False,False,False,False
+l1=(True,10,40)
+leg_loc    =  [
+                [l1],  
+                [l1], 
+                [l1]  
               ]
 
+show       =  [
+                 [True],
+                 [True],
+                 [True],
+              ]
+
+d1          =(2014,1,1,14,00)
+
 days        = [ 
-                [(2014,1,1,8),(2014,1,1,20)],
-                [(2014,1,1,8),(2014,1,1,20)],
-                [(2014,1,1,8),(2014,1,1,20)],
-                [(2014,1,1,8),(2014,1,1,20)],
-            ]
+                [d1],
+                [d1],
+                [d1],
+              ]
 
+#Working to plot whaever variable
 
-two.plot2d_im_diff(exp1,exp2,var,alt=alt,days=days,color=color,explabel=exp_label,var_to=var_to,contour=contour,axis_on=axis_on,show=show)
+#two.plot2d_horizontal(exp,var=var,contour=contour,xlim=xlim,ylim=ylim,days=days,color=color,explabel=exp_label,var_to=var_to,axis_on=axis_on,show=show)
 
+#two.plot2d_horizontal(exp,var=var,days=days,color=color,explabel=exp_label,var_to=var_to,axis_on=axis_on,show=show)
+
+two.plot2d_wind(exp,lev,contour=contour,xlim=xlim,ylim=ylim,days=days,color=color,explabel=exp_label,var_to=var_to,axis_on=axis_on,show=show)
 

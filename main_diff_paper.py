@@ -38,9 +38,9 @@ from    files_direction import *
 # Load function to make the diurnal cycle and profiles figures.  
 import  sam_python.two_dimensional   as two
 
-exp1=small
-exp2=medium
-case=' Medium-Small'
+#exp1=small
+#exp2=medium
+#case=' Medium-Small'
 
 
 exp1=medium
@@ -55,7 +55,7 @@ case=' Large-Medium'
 
 #separate with comak 
 exp_label   = [
-#                  r'a) $\mathrm{\theta_v}$'+case,r'b) RH'+case, r'c) W'+case, 
+                  #r'a) $\mathrm{\theta_v}$'+case,r'b) RH'+case, r'c) W'+case, 
                   r'd) $\mathrm{\theta_v}$'+case,r'e) RH'+case, r'f) W'+case, 
 #                 r'$\mathrm{\theta_v}$'+case,r' RH'+case, r' W'+case, 
 #                r'a) $\mathrm{\theta}_{ls}$'+case, r'b) q$_{ls}$'+case, r'c) W'+case, 
@@ -94,10 +94,10 @@ color       =  [
                 co1,co1,co1,co1,co1
                ]
 
-####bar ,y axis, top_lfc_pbl,cm a mais do grafico
-a1          =  (True,True ,True,True,0.35,1.34)
-a2          =  (True,False,True,True,0.35,1.28)
-a3          =  (True,False,True,True,0.35,1.28)
+####bar x,y axis, top_lfc_pbl,cm a mais do grafico
+a1          =  (True,True,True ,True,0.35,1.34)
+a2          =  (True,True,False,True,0.35,1.28)
+a3          =  (True,True,False,True,0.35,1.28)
 axis_on     =  [a1,a2,a3,]
 
 

@@ -89,10 +89,10 @@ color       =  [
                ]
 
 ####bar ,y axis, top_lfc_pbl,cm a mais do grafico
-a1          =  (True,True ,True,0.35,1.34)
-a2          =  (True,False,True,0.35,1.28)
-a3          =  (True,False,True,0.35,1.28)
-a4          =  (True,False,True,0.35,1.28)
+a1          =  (True,True,True ,True,0.35,1.34)
+a2          =  (True,True,False,True,0.35,1.28)
+a3          =  (True,True,False,True,0.35,1.28)
+a4          =  (True,True,False,True,0.35,1.28)
 axis_on     =  [a1,a2,a3,a4]
 
 

@@ -24,7 +24,7 @@ import   sam_python.var_files.var_to_load_sam as sam
 #eSTA COMPLETO, esta funcionando no swan 
 name        = 'large'
 #note       = large goamazon teste, 100 m resolution 
-file_4     = '/dados/bamc/jhonatan.aguirre/SHALLOW/shca_teste/OUT_STAT/GOAMAZON_LES_large_1024x150_100_50m_1s_12stat.nc'
+file_4     = '/dados/bamc/jhonatan.aguirre/SHALLOW/shca_experiments/OUT_STAT/GOAMAZON_LES_large_1024x150_100_50m_1s_12stat.nc'
 var1d       = ['MCUP','QC'] 
 var2d       = ['MCUP','QC'] 
 vars_diurnal= ['MCUP','QC']
@@ -35,7 +35,7 @@ large = sam.ncload(name,date,file_4,cal,var1d,var2d,vars_diurnal,date_diurnal)
 
 name        = 'l_shf_s'
 #note       =  large with  shf of small goamazon, 100 m resolution 
-file_2     = '/dados/bamc/jhonatan.aguirre/SHALLOW/shca_teste/OUT_STAT/GOAMAZON_LES_large_shf_small_1024x150_100_50m_1s.nc'
+file_2     = '/dados/bamc/jhonatan.aguirre/SHALLOW/shca_experiments/OUT_STAT/GOAMAZON_LES_large_shf_small_1024x150_100_50m_1s.nc'
 var1d       = ['MCUP','QC'] 
 var2d       = ['MCUP','QC'] 
 vars_diurnal= ['MCUP','QC']
@@ -46,7 +46,7 @@ l_shf_s = sam.ncload(name,date,file_2,cal,var1d,var2d,vars_diurnal,date_diurnal)
 
 name        = 'l_t_m'
 #note       =  large  with  t of medium  goamazon, 100 m resolution 
-file_3     = '/dados/bamc/jhonatan.aguirre/SHALLOW/shca_teste/OUT_STAT/GOAMAZON_LES_large_t_medium_1024x150_100_50m_1s.nc'
+file_3     = '/dados/bamc/jhonatan.aguirre/SHALLOW/shca_experiments/OUT_STAT/GOAMAZON_LES_large_t_medium_1024x150_100_50m_1s.nc'
 var1d       = ['MCUP','QC'] 
 var2d       = ['MCUP','QC'] 
 vars_diurnal= ['MCUP','QC']
@@ -58,7 +58,7 @@ l_t_m = sam.ncload(name,date,file_3,cal,var1d,var2d,vars_diurnal,date_diurnal)
 
 name        = 'l_shft_m'
 #note       = large with shf and t of medium,  100 m resolution 
-file_4     = '/dados/bamc/jhonatan.aguirre/SHALLOW/shca_teste/OUT_STAT/GOAMAZON_LES_large_shft_medium_1024x150_100_50m_1s.nc'
+file_4     = '/dados/bamc/jhonatan.aguirre/SHALLOW/shca_experiments/OUT_STAT/GOAMAZON_LES_large_shft_medium_1024x150_100_50m_1s.nc'
 var1d       = ['MCUP','QC'] 
 var2d       = ['MCUP','QC'] 
 vars_diurnal= ['MCUP','QC']

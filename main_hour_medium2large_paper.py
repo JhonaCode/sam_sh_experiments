@@ -75,7 +75,7 @@ exp_label   =  [
                ]
 
 exp_label_2  =  [
-                 r'a)Medium%sLarge 11H'%ar ,  
+                 r'd)Medium%sLarge 11H LT'%ar ,  
                 ]
 
 fig_name='m2l_final'
@@ -137,7 +137,7 @@ leg_loc      =  [
                 ]
 
 exp_label_2  =  [
-                 r'b)Medium%sLarge 14H'%ar ,  
+                 r'e)Medium%sLarge 14H LT'%ar ,  
                 ]
 
 dc.diurnal_exp_var_hour_sam(exp,var,14,fig_name,explabel=exp_label,explabel2=exp_label_2,xlabel=xlabel,alt=alt,leg_loc=leg_loc,lim=lim,color=color_exp,show=show,diurnal=diurnal)
@@ -150,7 +150,7 @@ leg_loc      =  [
                 ]
 
 exp_label_2  =  [
-                 r'c)Medium%sLarge 17H'%ar ,  
+                 r'f)Medium%sLarge 17H LT'%ar ,  
                 ]
 
 dc.diurnal_exp_var_hour_sam(exp,var,17,fig_name,explabel=exp_label,explabel2=exp_label_2,xlabel=xlabel,alt=alt,leg_loc=leg_loc,lim=lim,color=color_exp,show=show,diurnal=diurnal)

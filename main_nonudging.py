@@ -39,30 +39,16 @@ import  sam_python.two_dimensional   as two
 
 
 exp     = [
-           small,
-           medium,
-           large,
-           s_w_m,
-           s_t_m,
-           m_w_l,
-           #m_wshf_l,
-           #s_t_m_wshf_l,
-           #s_qt_m_wshf_l,
+           small_nn,
+           s_t_m_nn,
           ]
 
 var     =  ['MCUP']###,'RELH','WOBS',]
 
 #separate with comak 
 exp_label   = [
-                 [r'a) uMF Small'], 
-                 [r'b) uMF Medium'], 
-                 [r'c) uMF Large'], 
-                 [r'd) uMF Small+W(Medium)'], 
-                 [r'e) uMF Small+$\mathrm{\theta_{ls}}$(Medium)'], 
-                 [r'f) uMF Medium+W(Large)'], 
-                 [r'uMF M+[W,SH](L)'], 
-                 [r'uMF S+$\mathrm{\theta_{ls}}$(M)+[W,SH](L)'], 
-                 [r'uMF S+[$\mathrm{\theta_{ls}}$,q$_{ls}$](M)+[W,SH](L)'], 
+                 [r'a) uMF Small No Nudging'], 
+                 [r'e) uMF Small+$\mathrm{\theta_{ls}}$(Medium) No Nudging'], 
               ] 
 
 
@@ -149,17 +135,8 @@ axis_on     =  [
 
 
 show       =  [
-                 [False],
-                 [False],
                  [True],
                  [True],
-                 [False],
-                 [False],
-                 [False],
-                 [False],
-                 [False],
-                 [False],
-                 [False],
               ]
 
 d1=[(2014,1,1,8,00),(2014,1,1,20,5)]
@@ -177,6 +154,6 @@ days        = [
               ]
 
 
-two.plot2d_contour(exp,var=var,contour=contour,alt=alt,days=days,color=color,explabel=exp_label,var_to=var_to,axis_on=axis_on,show=show)
+two.plot2d_contour(exp,var=var,contour=contour,alt=alt,days=days,color=color,explabel1=exp_label,var_to=var_to,axis_on=axis_on,show=show)
 
 

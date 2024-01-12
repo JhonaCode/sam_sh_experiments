@@ -23,8 +23,8 @@ file_temporal= path
 #Size in inches to make the temporal plots
 tplot_size=1.0
 
+"""
 ####################################2d
-
 #Repository location 
 computer   = '/home/jhonatan.aguirre'
 #Figure out folder  
@@ -39,3 +39,4 @@ if not os.path.exists(path):
 
 file_fig= path
 file_temporal= path
+"""

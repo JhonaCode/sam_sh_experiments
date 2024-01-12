@@ -68,7 +68,7 @@ exp_label   =  [
                 'Small(S)',
                 '+W(M)',
                 r'+$\theta$%s(M)'%(ls) ,  
-                 '+q%s(M)'%(ls) ,  
+                r'+[$\theta$%s,q%s](M)'%(ls,ls) ,  
                 r'+[$\theta$%s,q%s,SH](M)'%(ls,ls),  
                  'Medium(M)' ,  
                ]
@@ -123,7 +123,7 @@ diurnal     =  [
 
 ar=r'$\rightarrow$'
 exp_label_2  =  [
-                 r'a)Small%sMedium 11H'%ar ,  
+                 r'a)Small%sMedium 11H LT'%ar ,  
                 ]
 
 dc.diurnal_exp_var_hour_sam(exp,var,11,fig_name,explabel=exp_label,explabel2=exp_label_2,xlabel=xlabel,alt=alt,leg_loc=leg_loc,lim=lim,color=color_exp,show=show,diurnal=diurnal)
@@ -143,7 +143,7 @@ leg_loc      =  [
                 ]
 
 exp_label_2  =  [
-                 r'b)Small%sMedium 14H'%ar ,  
+                 r'b)Small%sMedium 14H LT'%ar ,  
                 ]
 
 dc.diurnal_exp_var_hour_sam(exp,var,14,fig_name,explabel=exp_label,explabel2=exp_label_2,xlabel=xlabel,alt=alt,leg_loc=leg_loc,lim=lim,color=color_exp,show=show,diurnal=diurnal)
@@ -164,7 +164,7 @@ leg_loc      =  [
                 ]
 
 exp_label_2  =  [
-                 r'c)Small%sMedium 17H'%ar ,  
+                 r'c)Small%sMedium 17H LT'%ar ,  
                 ]
 
 dc.diurnal_exp_var_hour_sam(exp,var,17,fig_name,explabel=exp_label,explabel2=exp_label_2,xlabel=xlabel,alt=alt,leg_loc=leg_loc,lim=lim,color=color_exp,show=show,diurnal=diurnal)
